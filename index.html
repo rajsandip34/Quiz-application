@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>Small Wins — Quick Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- link css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Small Wins home"><span class="brand-mark">✳</span><span>small wins<span class="brand-period">.</span></span></a>
+    <div class="topbar-note"><span class="live-dot"></span> A little learning goes a long way</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY BRAIN BREAK <span class="eyebrow-line"></span></div>
+      <h1 id="page-title">A quick quiz.<br><span>A brighter day.</span></h1>
+      <p class="intro-copy">Five questions, a few minutes, and something new to take with you.</p>
+      <div class="meta-pills"><span>✦ &nbsp;5 questions</span><span>◷ &nbsp;About 2 min</span><span>↗ &nbsp;Just for fun</span></div>
+    </section>
+
+    <section class="quiz-card" aria-label="Quiz">
+      <div id="loading" class="loading-state"><span class="spinner"></span><span>Getting your questions ready…</span></div>
+      <div id="quiz-content" class="hidden">
+        <div class="quiz-topline">
+          <div><span class="section-label">TODAY'S QUIZ</span><span id="question-count" class="count-label"></span></div>
+          <span class="difficulty"><span class="difficulty-dot"></span> EASY DOES IT</span>
+        </div>
+        <div class="progress-track" aria-label="Quiz progress"><div id="progress-bar" class="progress-fill"></div></div>
+        <form id="quiz-form">
+          <div id="questions"></div>
+          <div id="form-message" class="form-message" role="status"></div>
+          <div class="quiz-footer">
+            <span class="footer-hint">Take your time — there's no clock.</span>
+            <button id="submit-btn" class="submit-button" type="submit">Check my answers <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </div>
+      <div id="result" class="hidden" aria-live="polite"></div>
+      <div id="error-state" class="hidden error-state"><div class="error-icon">!</div><h2>We hit a little snag.</h2><p id="error-message">Couldn’t load the quiz. Check that the server is running, then try again.</p><button id="retry-load" class="submit-button" type="button">Try again <span aria-hidden="true">↻</span></button></div>
+    </section>
+
+    <footer class="page-footer"><span>MADE FOR CURIOUS MINDS</span><span>Take a breath. You’re doing great. <span class="heart">♥</span></span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
